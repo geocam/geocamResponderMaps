@@ -10,14 +10,14 @@
     "children": [
         {
             "type": "kml.KML",
-            "name": "US Significant River Flood Outlook",
-            "url": "http://www.hpc.ncep.noaa.gov/kml/fop/fopbody.kml",
-            "show": "true"
+            "name": "Red Flag Warnings and Fire Watches",
+            "description": "Provided by USFS Remote Sensing Applications Center",
+            "url": "http://activefiremaps.fs.fed.us/data/kml/conus_fire_wx.kmz"
         },
         {
             "type": "kml.KML",
-            "name": "USGS Real-Time Streamflow - New England",
-            "url": "http://water.usgs.gov/waterwatch/?regions=01&m=real&w=kml"
+            "name": "InciWeb National Incidents",
+            "url": "http://www.inciweb.org/feeds/maps/kml/"
         }
     ]
 }

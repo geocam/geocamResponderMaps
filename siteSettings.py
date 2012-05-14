@@ -95,23 +95,20 @@ USE_STATIC_SERVE = True
 # Awesome. Needed in Django 1.3 but causes deprecation warning in Django 1.4.
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = 'lrw*8r8013g3pdkk-@4rjgra9*y0#(_#-p-4_a7_@-=9#jg0ow'
-
 # List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.load_template_source',
-    'django.template.loaders.app_directories.load_template_source',
-#     'django.template.loaders.eggs.load_template_source',
-)
+#TEMPLATE_LOADERS = (
+#    'django.template.loaders.filesystem.load_template_source',
+#    'django.template.loaders.app_directories.load_template_source',
+##     'django.template.loaders.eggs.load_template_source',
+#)
 
 MIDDLEWARE_CLASSES = (
     'geocamUtil.middleware.LogErrorsMiddleware',
     'django.middleware.gzip.GZipMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'geocamUtil.middleware.SecurityMiddleware',
+    #'django.contrib.sessions.middleware.SessionMiddleware',
+    #'django.contrib.auth.middleware.AuthenticationMiddleware',
+    #'geocamUtil.middleware.SecurityMiddleware',
 )
 
 ROOT_URLCONF = 'urls'
@@ -135,6 +132,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.staticfiles',
 )
 
 GEOCAM_UTIL_SECURITY_ENABLED = False # not USING_DJANGO_DEV_SERVER

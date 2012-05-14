@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block head %}
+   {{ block.super }}
+    <title>SF Bay Common Operating Picture</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+{% endblock head %}
+
+{% block style %}
+    {{ block.super }}
+
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}external/css/ui-lightness/jquery-ui-1.8.18.custom.css"></link>
+{% endblock style %}
+
+{% block scripts %}
+   {{ block.super }}
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}external/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}external/js/jquery-ui-1.8.18.custom.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}geocamMapSet/js/geocamMapSetLib.js"></script>
+{% endblock scripts %}
+   
+{% block contents %}
+    <table style="width: 100%; height: 100%;">
+      <tr style="width: 100%; height: 100%;">
+        <td style="width: 70%; height: 100%;" class="mapTable"><div id="map_canvas"></div></td>
+        <td style="width: 30%; height: 100%; padding-left: 10px;" class="mapTable"><div id="mapset_canvas"></div></td>
+      </tr>
+    </table>    
+{% endblock contents %}
+
+{% block jsInit %}
+      {{ block.super }}
+
+      var myMapSetManager;
+      function initialize() {
+          spec="{% url bayCop_mapJson %}";
+
+          var myOptions = {
+              center: new google.maps.LatLng(37.6, -122.3),
+              zoom: 10,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+          var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+          
+          myMapSetManager = geocamMapSetLib.MapSetManager(spec, map, '#mapset_canvas');
+      }
+
+      $(initialize());
+{% endblock jsInit %}

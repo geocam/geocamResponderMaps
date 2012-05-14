@@ -1,0 +1,23 @@
+{
+    "type": "Document",
+    "name": "Prototype Common Operating Picture",
+    "id": "1",
+    "mapsetjson": "0.1",
+    "extensions": {
+        "kml": "http://mapmixer.org/mapsetjson/ext/kml/0.1/",
+        "geojson": "http://mapmixer.org/mapsetjson/ext/geojson/0.1/"
+    },
+    "children": [
+        {
+            "type": "kml.KML",
+            "name": "US Significant River Flood Outlook",
+            "url": "http://www.hpc.ncep.noaa.gov/kml/fop/fopbody.kml",
+            "show": "true"
+        },
+        {
+            "type": "kml.KML",
+            "name": "USGS Real-Time Streamflow - New England",
+            "url": "http://water.usgs.gov/waterwatch/?regions=01&m=real&w=kml"
+        }
+    ]
+}

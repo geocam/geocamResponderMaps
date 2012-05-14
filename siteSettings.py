@@ -90,6 +90,8 @@ DATA_URL = SCRIPT_NAME + "data/"
 STATIC_ROOT = os.path.join(PROJ_ROOT, "build", "static", "")
 STATIC_URL = SCRIPT_NAME + 'static/'
 
+USE_STATIC_SERVE = True
+
 # Awesome. Needed in Django 1.3 but causes deprecation warning in Django 1.4.
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
@@ -124,9 +126,8 @@ TEMPLATE_DIRS = (
 # templates.  We suggest putting your apps above standard apps
 # so your apps can override templates as needed.
 INSTALLED_APPS = (
-    # Put your installed apps here!
-    # 'geocamAwesome'
-
+    'bayCop',
+    'geocamMapSet',
     'geocamUtil',
 
     'django.contrib.admin',
@@ -136,7 +137,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
 )
 
-GEOCAM_UTIL_SECURITY_ENABLED = not USING_DJANGO_DEV_SERVER
+GEOCAM_UTIL_SECURITY_ENABLED = False # not USING_DJANGO_DEV_SERVER
 GEOCAM_UTIL_SECURITY_SSL_REQUIRED_BY_DEFAULT = False
 GEOCAM_UTIL_SECURITY_REQUIRE_ENCRYPTED_PASSWORDS = False
 GEOCAM_UTIL_SECURITY_LOGIN_REQUIRED_BY_DEFAULT = 'write'

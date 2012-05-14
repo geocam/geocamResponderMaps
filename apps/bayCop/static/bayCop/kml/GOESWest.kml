@@ -2,7 +2,6 @@
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
 <GroundOverlay>
 	<name>GOES West</name>
-	<visibility>0</visibility>
 	<description>IR imagery from goes.gsfc.nasa.gov</description>
 	<LookAt>
 		<longitude>-117</longitude>

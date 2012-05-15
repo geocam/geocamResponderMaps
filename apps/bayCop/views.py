@@ -86,7 +86,8 @@ def checkLogin(request):
 
 def home(request):
     return render_to_response('bayCop/home.html',
-                              {'account_widget': getAccountWidget(request)},
+                              {},
+                              # {'account_widget': getAccountWidget(request)},
                               context_instance=RequestContext(request))
 
 

@@ -21,11 +21,11 @@ import django.contrib.auth.views
 from geocamUtil.auth import getAccountWidget
 from geocamUtil import anyjson as json
 
-from bayCop import settings
+from bayMaps import settings
 
 
 def welcome(request):
-    return render_to_response('bayCop/welcome.html',
+    return render_to_response('bayMaps/welcome.html',
                               {},
                               context_instance=RequestContext(request))
 
@@ -59,7 +59,7 @@ def welcome(request):
 #                     login(request, user)
 #                     return HttpResponseRedirect(nextUrl)
 
-#             return HttpResponseRedirect(reverse('bayCop_login') + '?next=%s' % nextUrl)
+#             return HttpResponseRedirect(reverse('bayMaps_login') + '?next=%s' % nextUrl)
 #         else:
 #             if useJson:
 #                 errInfo = {'code': -32099,
@@ -85,14 +85,14 @@ def checkLogin(request):
 
 
 def home(request):
-    return render_to_response('bayCop/home.html',
+    return render_to_response('bayMaps/home.html',
                               {},
                               # {'account_widget': getAccountWidget(request)},
                               context_instance=RequestContext(request))
 
 
 def mapJson(request):
-    text = open(os.path.join(settings.STATIC_ROOT, 'bayCop', 'js', 'map.json')).read()
+    text = open(os.path.join(settings.STATIC_ROOT, 'bayMaps', 'js', 'map.json')).read()
     return HttpResponse(text,
                         mimetype='application/json')
 

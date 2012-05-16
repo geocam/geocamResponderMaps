@@ -21,7 +21,7 @@
     <tr><td>&nbsp;</td></tr>
     <tr>
         <td>
-            <a href="{% url bayCop_register %}{{ nextParam }}" class="big_awesome_button">Sign up to start sharing map data. It's free!</a>
+            <a href="{% url bayMaps_register %}{{ nextParam }}" class="big_awesome_button">Sign up to start sharing map data. It's free!</a>
         </td>
     </tr>
     <tr><td>&nbsp;</td></tr>
@@ -41,7 +41,7 @@
             </table>
             <input type="submit" style="display:none"/>
             <a href="#" class="big_awesome_button" onclick="$('#geocam_login_form').submit(); return false;">Log in</a>
-            <input type="hidden" name="next" value="{% if request.REQUEST.next %}{{ request.REQUEST.next|safe }}{% else %}{% url bayCop_home %}{% endif %}">
+            <input type="hidden" name="next" value="{% if request.REQUEST.next %}{{ request.REQUEST.next|safe }}{% else %}{% url bayMaps_home %}{% endif %}">
         </form>
         </td>
     </tr>

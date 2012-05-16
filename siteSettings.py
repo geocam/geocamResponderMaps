@@ -123,7 +123,7 @@ TEMPLATE_DIRS = (
 # templates.  We suggest putting your apps above standard apps
 # so your apps can override templates as needed.
 INSTALLED_APPS = (
-    'bayCop',
+    'bayMaps',
     'geocamMapSet',
     'geocamCore',
     'geocamFolder',

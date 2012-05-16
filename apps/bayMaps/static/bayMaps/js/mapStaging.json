@@ -4,3 +4,35 @@
             "name": "Weather - GOES West IR",
             "url": "http://baycop.org/static/bayMaps/kml/GOESWest.kml"
         },
+
+
+// these fail to display in gmaps, possibly due to legend covering the whole map?
+
+        {
+            "type": "kml.KML",
+            "name": "Fire: Satellite Fire Detects (NOAA Land Products)",
+            "url": "http://www.osdpd.noaa.gov/ml/land/fire.kml"
+        },
+
+        {
+            "type": "kml.KML",
+            "name": "Fire: [smoke.kml] (NOAA Land Products)",
+            "url": "http://www.osdpd.noaa.gov/ml/land/smoke.kml"
+        },
+
+// loads *very* slowly
+
+        {
+            "type": "kml.KML",
+            "name": "Fire: [wfas_nfdr]",
+            "url": "http://www.wfas.net/google-earth/wfas_nfdr.kmz"
+        },
+
+
+// doesn't load, hangs on server side
+        {
+            "type": "kml.KML",
+            "name": "Earthquake: Earthquakes",
+            "description": " Provided by USGS",
+            "url": "http://earthquake.usgs.gov/earthquakes/feed/earthquakes.kml"
+        },

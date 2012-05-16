@@ -10,14 +10,67 @@
     "children": [
         {
             "type": "kml.KML",
-            "name": "Red Flag Warnings and Fire Watches",
+            "name": "Fire: SF Bay Area Fire Stations",
+            "description": "Provided by Martin Langeveld, collected Jan 2011",
+            "url": "http://baymaps.org/static/bayMaps/kml/sfBayAreaFireStations.kmz"
+        },
+
+        {
+            "type": "kml.KML",
+            "name": "Fire: National Red Flag Warnings and Fire Watches",
             "description": "Provided by USFS Remote Sensing Applications Center",
             "url": "http://activefiremaps.fs.fed.us/data/kml/conus_fire_wx.kmz"
         },
+
         {
             "type": "kml.KML",
-            "name": "InciWeb National Incidents",
+            "name": "Fire: National Incidents",
+            "description": "Provided by InciWeb",
             "url": "http://www.inciweb.org/feeds/maps/kml/"
+        },
+
+        {
+            "type": "kml.KML",
+            "name": "Fire: National Dry Lightning",
+            "description": "Provided by USFS Wildland Fire Assessment System",
+            "url": "http://www.wfas.net/google-earth/dry_lightning.kmz"
+        },
+
+
+        {
+            "type": "kml.KML",
+            "name": "Earthquake: Landslide Risk",
+            "description": "Provided by USGS",
+            "url": "http://earthquake.usgs.gov/regional/nca/bayarea/kml/landslides.kmz"
+        },
+
+        {
+            "type": "kml.KML",
+            "name": "Earthquake: Liquefaction Risk",
+            "description": "Provided by USGS",
+            "url": "http://earthquake.usgs.gov/regional/nca/bayarea/kml/liquefaction.kmz"
+        },
+
+        {
+            "type": "kml.KML",
+            "name": "Earthquake: Earthquake 7 Day History",
+            "description": "Provided by USGS",
+            "url": "http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-age.kmz"
+        },
+
+        {
+            "type": "kml.KML",
+            "name": "Logistics: BART Lines and Station Entrances",
+            "description": "Provided by BART",
+            "url": "http://api.bart.gov/kml/bart.kmz"
+        },
+
+        {
+            "type": "kml.KML",
+            "name": "Weather: Wide Area Cloud Cover",
+            "description": "IR imagery from GOES West",
+            "url": "http://baymaps.org/static/bayMaps/kml/GOESWest.kml"
         }
+
     ]
 }

@@ -13,8 +13,6 @@
 	</LookAt>
 	<Icon>
 		<href>http://goes.gsfc.nasa.gov/goescolor/goeswest/pacific2/geo/latest.tif</href>
-		<refreshMode>onInterval</refreshMode>
-		<refreshInterval>600</refreshInterval>
 	</Icon>
 	<LatLonBox>
 		<north>48.557747316891</north>

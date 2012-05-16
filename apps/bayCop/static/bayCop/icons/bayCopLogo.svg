@@ -308,7 +308,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
      inkscape:cx="386.69171"
-     inkscape:cy="846.19634"
+     inkscape:cy="760.48205"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -331,7 +331,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -575,7 +575,7 @@
          id="tspan4010"
          x="236.8051"
          y="195.06485"
-         style="font-size:49.79421234px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#7d362e;fill-opacity:1;stroke:none;font-family:Estrangelo Edessa;-inkscape-font-specification:Estrangelo Edessa Bold">BayCOP</tspan></text>
+         style="font-size:49.79421234px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#7d362e;fill-opacity:1;stroke:none;font-family:Estrangelo Edessa;-inkscape-font-specification:Estrangelo Edessa Bold">BayMaps</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:74.23388672px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#7d362e;fill-opacity:1;stroke:none;font-family:Estrangelo Edessa;-inkscape-font-specification:Estrangelo Edessa Bold"

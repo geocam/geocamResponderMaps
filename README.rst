@@ -5,12 +5,13 @@ a wide variety of government agencies and companies.  The project
 kickoff was a workshop sponsored by the `Association of Bay Area
 Governments`_ in May 2012.
 
-The BayMaps web service is built on software developed by the `GeoCam
-Project`_, which helps disaster responders get information faster by
-sharing maps, photos, and other data using their mobile devices.  The
-GeoCam team is part of the `NASA Ames Intelligent Robotics Group`_, and
-the project is funded by Google. GeoCam software is released open source
-and interoperates using open standards.
+This repo contains the source code for the BayMaps web service, which is
+built on software developed by the `GeoCam Project`_. GeoCam helps
+disaster responders get information faster by sharing maps, photos, and
+other data using their mobile devices.  The GeoCam team is part of the
+`NASA Ames Intelligent Robotics Group`_, and the project is funded by
+Google. GeoCam software is released open source and interoperates using
+open standards.
 
 .. _Association of Bay Area Governments: http://www.abag.ca.gov/
 

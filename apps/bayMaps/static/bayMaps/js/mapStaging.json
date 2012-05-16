@@ -36,3 +36,12 @@
             "description": " Provided by USGS",
             "url": "http://earthquake.usgs.gov/earthquakes/feed/earthquakes.kml"
         },
+
+// nothing shows up in Maps, works in GE
+        {
+            "type": "kml.KML",
+            "name": "Weather: Wide Area Cloud Cover",
+            "description": "IR imagery from GOES West",
+            "url": "http://baymaps.org/static/bayMaps/kml/GOESWest.kml"
+        },
+

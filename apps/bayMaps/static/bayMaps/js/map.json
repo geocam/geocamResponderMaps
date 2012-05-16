@@ -67,9 +67,9 @@
 
         {
             "type": "kml.KML",
-            "name": "Weather: Wide Area Cloud Cover",
-            "description": "IR imagery from GOES West",
-            "url": "http://baymaps.org/static/bayMaps/kml/GOESWest.kml"
+            "name": "Weather: National Severe Weather Warnings",
+            "description": "Provided by NOAA / NWS",
+            "url": "http://radar.weather.gov/ridge/warningzipmaker.php"
         }
 
     ]

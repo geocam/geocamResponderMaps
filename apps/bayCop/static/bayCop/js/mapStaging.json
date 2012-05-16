@@ -1,0 +1,6 @@
+
+        {
+            "type": "kml.KML",
+            "name": "Weather - GOES West IR",
+            "url": "http://baycop.org/static/bayCop/kml/GOESWest.kml"
+        },

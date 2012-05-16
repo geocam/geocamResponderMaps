@@ -1,10 +1,9 @@
 The BayMaps SF Bay Common Operating Picture, now under development, is a
 map sharing system for emergency management, designed to help teams
-coordinate and improve situation awareness.
-
-BayMaps is a partnership of a wide variety of government agencies and
-companies.  The project kickoff was a workshop sponsored by the
-`Association of Bay Area Governments`_ in May 2012.
+coordinate and improve situation awareness.  BayMaps is a partnership of
+a wide variety of government agencies and companies.  The project
+kickoff was a workshop sponsored by the `Association of Bay Area
+Governments`_ in May 2012.
 
 The BayMaps web service is built on software developed by the `GeoCam
 Project`_, which helps disaster responders get information faster by
@@ -43,6 +42,8 @@ assume Ubuntu.
 
 Set Up an Install Location
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
 
   export GEOCAM_DIR=$HOME/projects/geocam # or choose your own
   mkdir -p $GEOCAM_DIR
@@ -111,7 +112,7 @@ and collect static files for the server, run::
   ./manage.py prep
 
 You'll need to source the ``sourceme.sh`` file every time you open a new
-shell if you want to run Share-related Python scripts such as starting
+shell if you want to run related Python scripts such as starting
 the Django development web server.  The ``sourceme.sh`` file will also
 take care of activating your virtualenv environment in new shells, if
 you were in a virtualenv when you ran ``setup.py``.
@@ -132,7 +133,7 @@ To run the Django development web server::
   $GEOCAM_DIR/geocamBayMaps/manage.py runserver
 
 Now you're ready to try it out!  If you can open a web browser on the
-same host where Share is installed, you can start using the app by
+same host where the server is installed, you can start using the app by
 visiting http://localhost:8000/ in that browser.
 
 .. o  __BEGIN_LICENSE__

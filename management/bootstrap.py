@@ -277,7 +277,7 @@ def doit(opts, args):
     print '\nFinished bootstrapping\n'
 
     sys.path.insert(0, os.path.dirname(opts.siteDir))
-    from geocamBayCop.djangoWsgi import getEnvironmentFromSourceMe
+    from geocamBayMaps.djangoWsgi import getEnvironmentFromSourceMe
     getEnvironmentFromSourceMe()
 
 

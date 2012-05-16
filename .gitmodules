@@ -4,3 +4,9 @@
 [submodule "submodules/geocamMapSet"]
 	path = submodules/geocamMapSet
 	url = git://github.com/geocam/geocamMapSet.git
+[submodule "submodules/geocamFolderWeb"]
+	path = submodules/geocamFolderWeb
+	url = http://github.com/geocam/geocamFolderWeb.git
+[submodule "submodules/geocamCoreWeb"]
+	path = submodules/geocamCoreWeb
+	url = http://github.com/geocam/geocamCoreWeb.git

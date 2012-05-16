@@ -125,6 +125,8 @@ TEMPLATE_DIRS = (
 INSTALLED_APPS = (
     'bayCop',
     'geocamMapSet',
+    'geocamCore',
+    'geocamFolder',
     'geocamUtil',
 
     'django.contrib.admin',

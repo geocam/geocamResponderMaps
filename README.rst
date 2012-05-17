@@ -96,7 +96,7 @@ Install Non-Python Packages
 First install Ubuntu packages::
 
   # tools for Python package compilation and management
-  sudo apt-get install python2.6-dev python-pip
+  sudo apt-get install python2.7-dev python-pip
 
   # basic database
   sudo apt-get install sqlite3 libsqlite3-dev

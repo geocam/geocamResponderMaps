@@ -35,7 +35,7 @@
 
       var myMapSetManager;
       function initialize() {
-          spec="{% url responderMaps_mapJson %}";
+          spec="{{ STATIC_URL }}responderMaps/js/map.json";
 
           var myOptions = {
               center: new google.maps.LatLng(37.6, -122.3),

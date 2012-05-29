@@ -1,19 +1,24 @@
-The BayMaps SF Bay Common Operating Picture, now under development, is a
-map sharing system for emergency management, designed to help teams
-coordinate and improve situation awareness.  BayMaps is a partnership of
-a wide variety of government agencies and companies.  The project
-kickoff was a workshop sponsored by the `Association of Bay Area
-Governments`_ in May 2012.
+The ResponderMaps Common Operating Picture Platform, now under
+development, is a map sharing system for emergency management, designed
+to help teams coordinate and improve situation awareness.
 
-This repo contains the source code for the BayMaps web service, which is
-built on software developed by the `GeoCam Project`_. GeoCam helps
-disaster responders get information faster by sharing maps, photos, and
-other data using their mobile devices.  The GeoCam team is part of the
-`NASA Ames Intelligent Robotics Group`_, and the project is funded by
-Google. GeoCam software is released open source and interoperates using
-open standards.
+ResponderMaps will provide a wiki-like interface where participating
+organizations can share their map information using open standard
+formats. ResponderMaps' layers and live feeds will eventually support
+all hazards and all phases of the emergency management process.
 
-.. _Association of Bay Area Governments: http://www.abag.ca.gov/
+The first ResponderMaps pilot project is to assemble a common operating
+picture for emergency management in the SF Bay Area. We are working with
+a variety of agencies and companies to learn requirements and find
+relevant data sets.
+
+This repo contains the source code for the ResponderMaps web service,
+which is built on software developed by the `GeoCam Project`_. GeoCam
+helps disaster responders get information faster by sharing maps,
+photos, and other data using their mobile devices.  The GeoCam team is
+part of the `NASA Ames Intelligent Robotics Group`_, and the project is
+funded by Google. GeoCam software is released open source and
+interoperates using open standards.
 
 .. _GeoCam Project: http://geocamshare.org/
 

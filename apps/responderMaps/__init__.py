@@ -5,13 +5,13 @@
 # __END_LICENSE__
 
 """
-bayMaps
+responderMaps
 """
 
 import django.conf
 
 from geocamUtil.MultiSettings import MultiSettings
-from bayMaps import defaultSettings
+from responderMaps import defaultSettings
 
 __version_info__ = {
     'major': 0,

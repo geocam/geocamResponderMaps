@@ -6,51 +6,51 @@
 
 from django.conf.urls.defaults import *  # pylint: disable=W0401
 
-from bayMaps import settings
-from bayMaps import views
+from responderMaps import settings
+from responderMaps import views
 
 urlpatterns = patterns(
     '',
 
     url(r'^$', views.welcome,
         {},
-        name='bayMaps_welcome'),
+        name='responderMaps_welcome'),
 
     url(r'^home/$', views.home,
         {},
-        name='bayMaps_home'),
+        name='responderMaps_home'),
 
     url(r'^map.json$', views.mapJson,
         {},
-        name='bayMaps_mapJson'),
+        name='responderMaps_mapJson'),
 
     #url(r'^accounts/register/$', views.register,
     #    {'loginRequired': False},
-    #    name='bayMaps_register'),
+    #    name='responderMaps_register'),
 
     # accounts
     url(r'^accounts/login/$', views.welcome, # 'django.contrib.auth.views.login',
         {'loginRequired': False,  # avoid redirect loop
          'securityTags': ['loginRelated']
          },
-        name='bayMaps_login'),
+        name='responderMaps_login'),
     url(r'^accounts/logout/$', 'django.contrib.auth.views.logout',
         # show logout page instead of redirecting to log in again
         {'loginRequired': False,
          'securityTags': ['loginRelated']
          },
-        name='bayMaps_logout'),
+        name='responderMaps_logout'),
 
     url(r'^m/checkLogin/$', views.checkLogin,
         {'challenge': 'basic',
          'securityTags': ['dumbClient']},
-        name='bayMaps_checkLogin'),
+        name='responderMaps_checkLogin'),
 
 #    url(r'^m/register/$', views.register,
 #        {'loginRequired': False,
 #         'securityTags': ['loginRelated'],
 #         'useJson': True},
-#        name='bayMaps_register'),
+#        name='responderMaps_register'),
 
     )
 

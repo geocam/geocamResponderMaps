@@ -9,7 +9,7 @@ from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 
-from bayMaps.urls import urlpatterns as bayMapsPatterns
+from responderMaps.urls import urlpatterns as responderMapsPatterns
 
 urlpatterns = patterns(
     '',
@@ -18,7 +18,7 @@ urlpatterns = patterns(
     url(r'^admin/', include(admin.site.urls)),
 )
 
-urlpatterns += bayMapsPatterns
+urlpatterns += responderMapsPatterns
 
 if settings.USE_STATIC_SERVE:
     urlpatterns += patterns(
@@ -37,6 +37,6 @@ if settings.USE_STATIC_SERVE:
                  readOnly=True)),
         
         url(r'^favicon.ico$', 'django.views.generic.simple.redirect_to',
-            {'url': settings.STATIC_URL + 'bayMaps/icons/bayMaps.ico',
+            {'url': settings.STATIC_URL + 'responderMaps/icons/responderMaps.ico',
              'readOnly': True}),
         )

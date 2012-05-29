@@ -55,7 +55,7 @@ Get the Source
 Check out our latest source revision with::
 
   cd $GEOCAM_DIR
-  git clone git://github.com/geocam/geocamBayMaps.git
+  git clone git://github.com/geocam/geocamResponderMaps.git
 
 For more information on the Git version control system, visit `the Git home page`_.
 You can install Git on Ubuntu with::
@@ -79,8 +79,8 @@ To install virtualenv, create a sandbox named ``packages``, and
   sudo apt-get install python-virtualenv
   mkdir $GEOCAM_DIR/virtualenv
   cd $GEOCAM_DIR/virtualenv
-  virtualenv --no-site-packages geocamBayMaps
-  source geocamBayMaps/bin/activate
+  virtualenv --no-site-packages geocamResponderMaps
+  source geocamResponderMaps/bin/activate
 
 After your sandbox is activated, package management tools such as
 ``easy_install`` and ``pip`` will install packages into your sandbox
@@ -107,9 +107,9 @@ Set Up the Site
 To install Python dependencies, generate initial configuration files,
 and collect static files for the server, run::
 
-  cd $GEOCAM_DIR/geocamBayMaps
+  cd $GEOCAM_DIR/geocamResponderMaps
   ./manage.py bootstrap --yes
-  source $GEOCAM_DIR/geocamBayMaps/sourceme.sh
+  source $GEOCAM_DIR/geocamResponderMaps/sourceme.sh
   ./manage.py prep
 
 You'll need to source the ``sourceme.sh`` file every time you open a new
@@ -120,7 +120,7 @@ you were in a virtualenv when you ran ``setup.py``.
 
 To initialize the database::
 
-  $GEOCAM_DIR/geocamBayMaps/manage.py syncdb
+  $GEOCAM_DIR/geocamResponderMaps/manage.py syncdb
 
 The syncdb script will ask you if you want to create a Django superuser.
 We recommend answering 'yes' and setting the admin username to ``root``
@@ -131,7 +131,7 @@ Try It Out
 
 To run the Django development web server::
 
-  $GEOCAM_DIR/geocamBayMaps/manage.py runserver
+  $GEOCAM_DIR/geocamResponderMaps/manage.py runserver
 
 Now you're ready to try it out!  If you can open a web browser on the
 same host where the server is installed, you can start using the app by

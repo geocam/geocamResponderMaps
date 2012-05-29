@@ -21,7 +21,7 @@ def read_file(filename):
         return ''
 
 # Use the docstring of the __init__ file to be the description
-#DESC = " ".join(__import__('geocamBayMaps').__doc__.splitlines()).strip()
+#DESC = " ".join(__import__('geocamResponderMaps').__doc__.splitlines()).strip()
 DESC = ""
 
 PROJ_ROOT = op.abspath(op.dirname(__file__))
@@ -173,8 +173,8 @@ class MediaCommand(Command):
 
 
 setup(
-    name="geocamBayMaps",
-    version='1.0',  # __import__('geocamBayMaps').get_version().replace(' ', '-'),
+    name="geocamResponderMaps",
+    version='1.0',  # __import__('geocamResponderMaps').get_version().replace(' ', '-'),
     url='',
     author='Trey Smith',
     author_email='',

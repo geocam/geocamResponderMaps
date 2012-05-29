@@ -2,7 +2,7 @@
         {
             "type": "kml.KML",
             "name": "Weather - GOES West IR",
-            "url": "http://baycop.org/static/bayMaps/kml/GOESWest.kml"
+            "url": "http://baycop.org/static/responderMaps/kml/GOESWest.kml"
         },
 
 
@@ -42,6 +42,6 @@
             "type": "kml.KML",
             "name": "Weather: Wide Area Cloud Cover",
             "description": "IR imagery from GOES West",
-            "url": "http://baymaps.org/static/bayMaps/kml/GOESWest.kml"
+            "url": "http://baymaps.org/static/responderMaps/kml/GOESWest.kml"
         },
 

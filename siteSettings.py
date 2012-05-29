@@ -20,6 +20,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 import os
 import sys
+from django.conf import global_settings
 #APP = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 #PROJ_ROOT = os.path.abspath(os.path.dirname(__file__))
 PROJ_ROOT = os.path.abspath(os.path.dirname(__file__))
@@ -108,8 +109,12 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     #'django.contrib.sessions.middleware.SessionMiddleware',
     #'django.contrib.auth.middleware.AuthenticationMiddleware',
-    #'geocamUtil.middleware.SecurityMiddleware',
+    'geocamUtil.middleware.SecurityMiddleware',
 )
+
+TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
+    'geocamUtil.context_processors.static',
+    )
 
 ROOT_URLCONF = 'urls'
 
@@ -129,12 +134,13 @@ INSTALLED_APPS = (
     'geocamFolder',
     'geocamUtil',
 
+    'staticfiles',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'django.contrib.staticfiles',
 )
 
 GEOCAM_UTIL_SECURITY_ENABLED = False # not USING_DJANGO_DEV_SERVER

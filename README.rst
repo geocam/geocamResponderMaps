@@ -138,7 +138,7 @@ To run the Django development web server::
 
   $GEOCAM_DIR/geocamResponderMaps/manage.py runserver
 
-Under Django 1.4, you may need to add the ``--nothread`` option:
+Under Django 1.4, you may need to add the ``--nothread`` option::
 
   $GEOCAM_DIR/geocamResponderMaps/manage.py runserver --nothread
 

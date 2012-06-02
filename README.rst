@@ -138,6 +138,10 @@ To run the Django development web server::
 
   $GEOCAM_DIR/geocamResponderMaps/manage.py runserver
 
+Under Django 1.4, you may need to add the ``--nothread`` option:
+
+  $GEOCAM_DIR/geocamResponderMaps/manage.py runserver --nothread
+
 Now you're ready to try it out!  If you can open a web browser on the
 same host where the server is installed, you can start using the app by
 visiting http://localhost:8000/ in that browser.

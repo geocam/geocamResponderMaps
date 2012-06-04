@@ -84,7 +84,7 @@ def checkLogin(request):
     return HttpResponse('ok')
 
 
-def home(request):
+def feature(request):
     return render_to_response('responderMaps/home.html',
                               {},
                               # {'account_widget': getAccountWidget(request)},

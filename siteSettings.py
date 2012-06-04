@@ -103,7 +103,7 @@ ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 ##     'django.template.loaders.eggs.load_template_source',
 #)
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE_CLASSES = global_settings.MIDDLEWARE_CLASSES + (
     'geocamUtil.middleware.LogErrorsMiddleware',
     'django.middleware.gzip.GZipMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -113,7 +113,9 @@ MIDDLEWARE_CLASSES = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
+    'django.contrib.auth.context_processors.auth',
     'geocamUtil.context_processors.static',
+    'geocamUtil.context_processors.AuthUrlsContextProcessor.AuthUrlsContextProcessor',
     )
 
 ROOT_URLCONF = 'urls'
@@ -134,8 +136,9 @@ INSTALLED_APPS = (
     'geocamFolder',
     'geocamUtil',
 
-    'staticfiles',
+    'django_digest',
 
+    'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -147,3 +150,11 @@ GEOCAM_UTIL_SECURITY_ENABLED = False # not USING_DJANGO_DEV_SERVER
 GEOCAM_UTIL_SECURITY_SSL_REQUIRED_BY_DEFAULT = False
 GEOCAM_UTIL_SECURITY_REQUIRE_ENCRYPTED_PASSWORDS = False
 GEOCAM_UTIL_SECURITY_LOGIN_REQUIRED_BY_DEFAULT = 'write'
+
+LOGIN_URL = SCRIPT_NAME + 'accounts/login/'
+LOGOUT_URL = SCRIPT_NAME + 'accounts/logout/'
+LOGIN_DEFAULT_NEXT_URL = SCRIPT_NAME + 'home/'
+
+SITE_TITLE = 'ResponderMaps'
+
+GEOCAM_UTIL_INSTALLER_USE_SYMLINKS = True

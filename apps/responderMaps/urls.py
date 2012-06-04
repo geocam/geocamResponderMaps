@@ -16,9 +16,9 @@ urlpatterns = patterns(
         {},
         name='responderMaps_welcome'),
 
-    url(r'^home/$', views.home,
+    url(r'^feature/$', views.feature,
         {},
-        name='responderMaps_home'),
+        name='responderMaps_feature'),
 
     url(r'^map.json$', views.mapJson,
         {},

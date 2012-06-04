@@ -1,20 +1,11 @@
-{% extends "base2.html" %}
-
-{% block popupmenu %} <!-- Zero out popup menu -->{% endblock %}
-{% block menubar %}
-<ul id="menu_bar_items">
-    <li class="home" onclick="go_to_view('/');">&nbsp;</li>
-</ul>
-{% endblock %}
+{% extends "base.html" %}
 
 {% block contents %}
 
 <h1>{{ settings.SITE_TITLE }}</h1>
 
-<div style="max-width: 600px;">
-  <p style="font-size: 1.3em;">Logged out successfully.</p>
+<p style="font-size: 1.3em;">Logged out successfully.</p>
 
-  <p><a class="big_awesome_button" href="{{ settings.SCRIPT_NAME }}">Log in again</a></p>
-</div>
+<p><a href="{{ login_url_with_next }}">Log in again</a></p>
 
 {% endblock %}

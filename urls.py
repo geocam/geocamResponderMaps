@@ -10,15 +10,25 @@ from django.contrib import admin
 admin.autodiscover()
 
 from responderMaps.urls import urlpatterns as responderMapsPatterns
+from geocamMapSet.urls import urlpatterns as geocamMapSetPatterns
 
 urlpatterns = patterns(
     '',
 
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
+
+    url(r'^accounts/login/$', 'django.contrib.auth.views.login',
+     {'loginRequired': False, # avoid redirect loop
+      }, 'login'),
+    url(r'^accounts/logout/$', 'django.contrib.auth.views.logout',
+        # show logout page instead of redirecting to log in again
+        {'loginRequired': False},
+        'logout'),
 )
 
 urlpatterns += responderMapsPatterns
+urlpatterns += geocamMapSetPatterns
 
 if settings.USE_STATIC_SERVE:
     urlpatterns += patterns(

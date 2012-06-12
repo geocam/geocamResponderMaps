@@ -10,5 +10,3 @@
 # This is a place to specify any Python dependencies your site has that
 # are not already specified in the requirements.txt file of one of your
 # apps.
-
-django-staticfiles

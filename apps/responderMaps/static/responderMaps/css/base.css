@@ -154,3 +154,6 @@ td.mapTable {
     background: #888;
 }
 
+.ui-button {
+    border: 1px solid #333;
+}

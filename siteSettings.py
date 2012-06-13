@@ -74,6 +74,10 @@ MEDIA_ROOT = os.path.join(PROJ_ROOT, "build", "media", "")
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = SCRIPT_NAME + 'media/'
 
+
+STATIC_ROOT = os.path.join(PROJ_ROOT, "build", "static", "")
+STATIC_URL = SCRIPT_NAME + 'static/'
+
 # Absolute path to the directory that holds data. This is different than media
 # in that it's uploaded/processed data that's not needed for the operation of
 # the site, but may need to be network-accessible, or be linked to from the
@@ -115,6 +119,7 @@ MIDDLEWARE_CLASSES = global_settings.MIDDLEWARE_CLASSES + (
 TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
     'django.contrib.auth.context_processors.auth',
     'geocamUtil.context_processors.static',
+    'geocamUtil.context_processors.settings',
     'geocamUtil.context_processors.AuthUrlsContextProcessor.AuthUrlsContextProcessor',
     )
 

@@ -85,7 +85,7 @@ td.mapTable {
     margin-right: 15px;
     margin-top: 10px;
 }
-#importLayer {
+#newLayer {
     margin-left: 15px;
 }
 
@@ -111,6 +111,10 @@ td.mapTable {
      
 #mapLibraryList {
     background: #888;
+}
+
+#newLayer {
+    margin-top: 10px;
 }
 
 .libraryEntry {
@@ -153,4 +157,14 @@ td.mapTable {
 
 .ui-button {
     border: 1px solid #333;
+}
+
+#dialogError {
+    font-weight: bold;
+    color: red;
+}
+
+.formError {
+    font-weight: bold;
+    color: red;
 }

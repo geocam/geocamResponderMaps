@@ -128,3 +128,7 @@ def profile(request):
                                    'user_form': user_form,
                                    },
                                   context_instance=RequestContext(request))
+
+def termsOfService(request):
+    return render_to_response('registration/terms.html', {},
+                              context_instance=RequestContext(request))

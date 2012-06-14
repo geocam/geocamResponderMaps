@@ -168,3 +168,26 @@ td.mapTable {
     font-weight: bold;
     color: red;
 }
+
+#newLayerForm th {
+    vertical-align: top;
+    text-align: right;
+    padding-top: 8px;
+    padding-right: 5px;
+    color: #666;
+}
+
+.formInstructions {
+    font-weight: bold;
+    color: #666;
+}
+
+.termsTitle {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.termsContainer {
+    padding: 20px;
+    width: 640px;
+}

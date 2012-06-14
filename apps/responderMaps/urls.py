@@ -16,6 +16,10 @@ urlpatterns = patterns(
         {},
         name='responderMaps_welcome'),
 
+    url(r'^terms/$', views.termsOfService,
+        {},
+        name='termsOfService'),
+
     url(r'^feature/$', views.feature,
         {},
         name='responderMaps_feature'),

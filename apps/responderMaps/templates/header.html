@@ -4,7 +4,7 @@
   </div>
   <div id="navBar">
     <span class="navLink"><a href="{% url responderMaps_welcome %}">Welcome</a></span>
-    <span class="navLink"><a href="{% url responderMaps_feature %}">Prototype</a></span>
+    <span class="navLink"><a href="{% url geocamMapSet_dashboard %}">Dashboard</a></span>
   {% if user.is_authenticated %}
     <a href="{{ logout_url }}"                                                
        title="Logout">

@@ -191,3 +191,51 @@ td.mapTable {
     padding: 20px;
     width: 640px;
 }
+
+.dialogSteps {
+    padding-bottom: 20px;
+}
+
+.dialogStep {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #aaa;
+    padding-right: 20px;
+}
+
+.dialogStepHighlight {
+    color: #444;
+}
+
+.sidebarChoices {
+    border-right: 1px solid black;
+    padding-right: 15px;
+    vertical-align: top;
+    width: 120px;
+}
+
+.sidebarChoice {
+    font-size: 1.2em;
+    color: black;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.sidebarChoiceHighlight {
+    color: #c0362c;
+    font-weight: bold;
+    cursor: auto;
+}
+
+.selectFile {
+    padding-left: 15px;
+    vertical-align: top;
+}
+
+.radioOption {
+    font-weight: bold;
+}
+
+.radioOptionDescription {
+    padding-bottom: 10px;
+}

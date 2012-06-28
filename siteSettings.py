@@ -41,12 +41,23 @@ ADMINS = (
 MANAGERS = ADMINS
 
 # Databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'dev.db'
+if (os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine') or os.getenv('SETTINGS_MODE','') == 'appengine'):
+    # Running on production App Engine, so use a Google Cloud SQL database.
+    # e.g.: SETTINGS_MODE=appengine ./manage.py syncdb
+    DATABASES = {
+        'default': {
+            'ENGINE': 'google.appengine.ext.django.backends.rdbms',
+            'INSTANCE': 'geopub-db:geopub', # the cloud sql "instance name"
+            'NAME': 'respondermaps', # the name of the database
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'dev.db'
+        }
+    }
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

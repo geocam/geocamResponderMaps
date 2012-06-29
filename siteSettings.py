@@ -21,6 +21,8 @@ TEMPLATE_DEBUG = DEBUG
 import os
 import sys
 from django.conf import global_settings
+from django.core.files.storage import default_storage
+
 #APP = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 #PROJ_ROOT = os.path.abspath(os.path.dirname(__file__))
 PROJ_ROOT = os.path.abspath(os.path.dirname(__file__))
@@ -35,13 +37,30 @@ if USING_DJANGO_DEV_SERVER:
 # checked-out version of an app over the standard python install locations.
 sys.path.append(PROJ_ROOT)
 
+GCS_OPTIONS = {
+    'bucket': 'responder-maps',
+}
+
 ADMINS = (
     # ('Trey Smith', 'your_email@domain.com'),
 )
 MANAGERS = ADMINS
 
+# Deployment environment
+if os.getenv('SERVER_ENV', '').startswith('Google App Engine'):
+    DEPLOYMENT_ENV = 'appengine'
+else:
+    DEPLOYMENT_ENV = 'default'
+
+# Storage
+if DEPLOYMENT_ENV == 'appengine':
+    from submodules.geocamAppEngineLibs.storage import GCSStorage
+    STORAGE_BACKEND = GCSStorage(GCS_OPTIONS)
+else:
+    STORAGE_BACKEND = default_storage
+
 # Databases
-if (os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine') or os.getenv('SETTINGS_MODE','') == 'appengine'):
+if DEPLOYMENT_ENV == 'appengine':
     # Running on production App Engine, so use a Google Cloud SQL database.
     # e.g.: SETTINGS_MODE=appengine ./manage.py syncdb
     DATABASES = {
@@ -55,7 +74,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': 'dev.db'
+            'NAME': 'dev.db',
         }
     }
 

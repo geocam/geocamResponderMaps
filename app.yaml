@@ -29,3 +29,8 @@ handlers:
 
 - url: /.*
   script: submodules/geocamAppEngineLibs/main.py
+
+env_variables:
+  DJANGO_SETTINGS_MODULE: 'geocamResponderMaps.settings'
+  DJANGO_SCRIPT_NAME: '/geocamResponderMaps/'
+  SERVER_ENV: 'Google App Engine'

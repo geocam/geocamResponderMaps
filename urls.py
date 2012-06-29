@@ -25,6 +25,8 @@ urlpatterns = patterns(
         # show logout page instead of redirecting to log in again
         {'loginRequired': False},
         'logout'),
+
+    url(r'^geocamTiePoint/', include('geocamTiePoint.urls')),
 )
 
 urlpatterns += responderMapsPatterns

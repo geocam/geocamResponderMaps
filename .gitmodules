@@ -16,3 +16,6 @@
 [submodule "submodules/geocamTiePoint"]
 	path = submodules/geocamTiePoint
 	url = http://github.com/geocam/geocamTiePoint.git
+[submodule "submodules/geocamResponderMapsNextGen"]
+	path = submodules/geocamResponderMapsNextGen
+	url = https://github.com/geocam/geocamResponderMapsNextGen.git

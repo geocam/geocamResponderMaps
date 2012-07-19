@@ -20,6 +20,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 import os
 import sys
+import logging
 from django.conf import global_settings
 from django.core.files.storage import default_storage
 
@@ -167,11 +168,10 @@ TEMPLATE_DIRS = (
 INSTALLED_APPS = (
     'responderMaps',
     'geocamMapSet',
-    'geocamTiePoint',
+    #'geocamTiePoint',
     'geocamCore',
     'geocamFolder',
     'geocamUtil',
-    #'geocamTiePoint',
 
     'django_digest',
 
@@ -182,6 +182,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
 )
+
+try:
+    import numpy
+    INSTALLED_APPS += ('geocamTiePoint',)
+except ImportError:
+    logging.warning("Could not import numpy.  geocamTiePoint will not be installed")
 
 GEOCAM_UTIL_SECURITY_ENABLED = False # not USING_DJANGO_DEV_SERVER
 GEOCAM_UTIL_SECURITY_SSL_REQUIRED_BY_DEFAULT = False

@@ -171,6 +171,7 @@ INSTALLED_APPS = (
     'geocamCore',
     'geocamFolder',
     'geocamUtil',
+    #'geocamTiePoint',
 
     'django_digest',
 
@@ -194,3 +195,7 @@ LOGIN_DEFAULT_NEXT_URL = SCRIPT_NAME + 'home/'
 SITE_TITLE = 'ResponderMaps'
 
 GEOCAM_UTIL_INSTALLER_USE_SYMLINKS = True
+
+STATICFILES_DIRS = [
+    os.path.join(PROJ_ROOT, "submodules/geocamResponderMapsNextGen"),
+]

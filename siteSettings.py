@@ -168,7 +168,6 @@ TEMPLATE_DIRS = (
 INSTALLED_APPS = (
     'responderMaps',
     'geocamMapSet',
-    #'geocamTiePoint',
     'geocamCore',
     'geocamFolder',
     'geocamUtil',

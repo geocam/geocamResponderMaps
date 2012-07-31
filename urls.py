@@ -29,7 +29,7 @@ urlpatterns = patterns(
 )
 
 if 'geocamTiePoint' in settings.INSTALLED_APPS:
-    urlpatterns += (
+    urlpatterns += patterns(
     '',
     url(r'^geocamTiePoint/', include('geocamTiePoint.urls')),
     )

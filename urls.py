@@ -26,8 +26,13 @@ urlpatterns = patterns(
         {'loginRequired': False},
         'logout'),
 
-    url(r'^geocamTiePoint/', include('geocamTiePoint.urls')),
 )
+
+if 'geocamTiePoint' in settings.INSTALLED_APPS:
+    urlpatterns += (
+    '',
+    url(r'^geocamTiePoint/', include('geocamTiePoint.urls')),
+    )
 
 urlpatterns += responderMapsPatterns
 urlpatterns += geocamMapSetPatterns
